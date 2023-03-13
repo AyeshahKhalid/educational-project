@@ -1,0 +1,182 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* *************************************** */
+ /*In this part we will make the round shape
+        of the face,and the basic structure of face
+            like add some color of face,height,width etc*/
+            .emoji{
+                display: flex;
+                justify-content: space-around;
+                background:linear-gradient(to top, #00c0eb, #0079a1);
+                /* background-color: #37bdbf; */
+                /* position: relative;
+                height: 100vh !important; */
+                /* top: 0; */
+            }
+            .face {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: #f26524;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .face::before {
+                /*In this part we will make
+                    the mouth of the face*/
+                content: "";
+                position: absolute;
+                top: 120px;
+                width: 150px;
+                height: 70px;
+                background: yellow;
+                border-bottom-left-radius: 70px;
+                border-bottom-right-radius: 70px;
+                transition: 0.5s;
+            }
+            .face:hover::before {
+                /*Here we will add the hover effects.
+                    Like when the cursor will came on the mouth the
+                    mouth will closed that means is radius
+                    will be decreased*/
+                top: 120px;
+                width: 150px;
+                height: 20px;
+                background: yellow;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            /*In this part we will make
+                the eyes of the face*/
+            .eyes {
+                position: relative;
+                top: -30px;
+                display: flex;
+            }
+            .eyes .eye {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                display: block;
+                background: #fff;
+                margin: 0 15px;
+                border-radius: 50%;
+            }
+            .eyes .eye::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 25%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                background: #000;
+                border-radius: 50%;
+            }
+            .banner-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .banner-logo img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+              }
+/* *************************************** */
+.bubbling-text {
+    font-family: 'Chewy', cursive;
+    font-size: 2.2em;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+    text-shadow: 2px 2px 0 #C70039 , 4px 4px 0 #f26524, 6px 6px 0 #f1c366;
+  }
+  
+  .bubbling-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: #ffca6e;
+    z-index: -1;
+    animation: bubbling 1s linear infinite;
+    opacity: 0.5;
+  }
+  
+  .fun-font {
+    font-family: 'Fredoka One', cursive;
+    font-size: 46px;
+    text-shadow: 2px 2px 0 #121212 , 4px 4px 0 #707070, 6px 6px 0 #d3d3d3;
+  }
+  
+
+  
+  
+
+  
+/* *************************************** */
+.btn{
+    width: 100px;
+    margin: 8px 0px;
+}
+
+.btn-containers{
+background-color: #f26524;
+display: flex;
+/* border: 2px solid rgb(41, 24, 24); */
+justify-content: space-around;
+position: sticky;
+top: 0;
+z-index: 1;
+}
+.cards-container{
+    background-color: #37bdbf;
+}
+.topic-container{
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h2-grade{
+    border-top: 1px solid white;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding:20px 0px;
+    position: sticky;
+}
+.h3-topic{
+    padding: 40px 0px;
+    text-align: center;
+}
+.cards{
+    display: inline-block;
+  width: auto;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.link:visited{
+    color: #f26524;
+}
+.link:hover{
+    color: white;
+}
+
+
+.borders{
+    border: 1px solid red;
+}
