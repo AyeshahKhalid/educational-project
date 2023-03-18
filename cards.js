@@ -10,6 +10,7 @@ function cardsTemplate(props) {
     let h2 = document.createElement("h2");
     h2.classList.add("h2-grade","fun-font");
     h2.textContent = grade;
+    h2.setAttribute("id",grade)
     let row = document.createElement("div");
     row.classList.add("row");
     
@@ -29,20 +30,14 @@ function cardsTemplate(props) {
         card.classList.add("cards");
         
         let link = document.createElement("a");
-        // link.href = `https://www.google.com/search?q=${cards[i]}`;
+        link.href = "template.html";
+        link.href=`template.html?title=${cards[i]}`;
+
         link.classList.add("link");
         link.target = "_blank";
-        link.addEventListener("click", function () {
-          event.preventDefault(); // prevent the default behavior of the link
-          const html = htmlTemplate(props);
-          const newTab = window.open();
-          newTab.document.write(html); // write the generated HTML to the new tab
-        });
         link.textContent = cards[i];
         card.append(link);
         
-
-        // card.textContent = `${cards[i]}`;
         // Set background color of col
         col.style.backgroundColor = lightColors[i % lightColors.length];
         col.append(card);
